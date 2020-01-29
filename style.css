@@ -1,0 +1,136 @@
+body {
+  margin: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Passion One', cursive;
+  font-weight: black
+  font-size: 48px;
+  color: black;
+}
+
+h2 {
+  font-family: 'Passion One', cursive;
+  font-size: 32px;
+  color: black;
+  margin: 15px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile p {
+  min-width: 250px;
+  max-width: 700px;
+  margin: 10px;
+}
+
+#profile img {
+  border-radius: 50%;
+}
+
+section {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.section-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.block {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 240px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 14px rgba(126,87,88,.3);
+  box-shadow: 0 3px 6px rgba(0,0,0,.3);
+}
+
+.block p {
+  color: #fe0e15;
+  margin-top: 30px;
+}
+
+.CTA-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CTA {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fe0e15;
+  padding:20px;
+  margin:;
+  border-radius: 5px;
+  width: 240px;
+  box-shadow: 0 2px 14px rgba(126,87,88,.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,.08);
+}
+
+.CTA a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background-color: rgba(253,16,21,.1);
+  margin: none;
+}
+
+ul {
+  padding: 5px;
+  margin: 5px;
+}
+
+li {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+li a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #fe0e15;
+}
+
+
