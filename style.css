@@ -8,14 +8,14 @@ body {
 }
 
 h1 {
-  font-family: 'Passion One', cursive;
-  font-weight: black
-  font-size: 48px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
   color: black;
+  margin: 30px;
 }
 
 h2 {
-  font-family: 'Passion One', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 32px;
   color: black;
   margin: 15px;
@@ -36,8 +36,11 @@ p {
 
 #profile p {
   min-width: 250px;
-  max-width: 700px;
-  margin: 10px;
+  max-width: 810px;
+  margin: 5px;
+  background-color: rgba(253,16,21,.1);
+  padding: 15px;
+  border-radius: 5px;
 }
 
 #profile img {
@@ -73,7 +76,7 @@ section {
 }
 
 .block p {
-  color: #fe0e15;
+  color: ;
   margin-top: 30px;
 }
 
