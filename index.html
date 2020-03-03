@@ -6,36 +6,33 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Roboto:400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script>
-      const getMessagesAndAnswer = () => {
-        window.addEventListener("message", function(message) {
-        console.log(message.origin);
-          if (message.origin == "http://localhost:3000") {
-            if (message.data == "init") {
+    const getMessagesAndAnswer = () => {
+      window.addEventListener("message", function(message) {
+        if (message.origin == "http://localhost:3000" || "https://www.spotted.wtf") {
+          if (message.data == "init") {
             const h = document.querySelectorAll("h1, h2, h3, h4, h5, h6, li, p, div, span, mark, ins, del, sup, sub, small, i, b, blockquote, q, strong, em");
-            // console.log(h);
             h.forEach ((tag) => {
               if (tag.childNodes[0] && tag.childNodes[0].textContent.trim() != "") {
                 tag.contentEditable = "true";
                 tag.addEventListener("click", () => {
                   const old_content = tag.innerText;
                   message.source.postMessage(`§${old_content}`, message.origin);
-                  // console.log(old_content);
-                  console.log(message)
                 }, { once: true });
                 tag.addEventListener("keyup", () => {
-                  const new_content = tag.innerText;
-                  message.source.postMessage(new_content, message.origin)
+                    const new_content = tag.innerText;
+                    message.source.postMessage(new_content, message.origin)
                 });
-          } else {
-            return;
-            }
+              } else {
+              return;
+              }
             })
-            }
           }
-        });
-      }
-      getMessagesAndAnswer();
+        }
+      });
+    }
+    getMessagesAndAnswer();
     </script>
   </head>
 
