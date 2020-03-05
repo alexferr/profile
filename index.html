@@ -8,36 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
-          const getMessagesAndAnswer = () => {
-            window.addEventListener("message", function(message) {
-              if (message.origin == "http://localhost:3000" || "https://www.spotted.wtf") {
-                if (message.data == "init") {
-                  const h = document.querySelectorAll("h1, h2, h3, h4, h5, h6, li, p, div, span, mark, ins, del, sup, sub, small, i, b, blockquote, q, strong, em");
-                  let tagId = 0;
-                  h.forEach ((tag) => {
-                    tag.setAttribute("id", `${tagId}`);
-                    if (tag.childNodes[0] && tag.childNodes[0].textContent.trim() != "") {
-                      tagId += 1;
-                      tag.contentEditable = "true";
-                      tag.addEventListener("click", () => {
-                        const old_content = `${tag.id}-${tag.innerText}`;
-                        message.source.postMessage(`${old_content}§`, message.origin);
-                      }, { once: true });
-                      tag.addEventListener("keyup", () => {
-                          const new_content = `${tag.id}-${tag.innerText}`;
-                          message.source.postMessage(`${new_content}`, message.origin)
-                      });
-                    } else {
-                    return;
-                    }
-                    console.log(tag)
-                  })
+      const getMessagesAndAnswer = () => {
+        window.addEventListener("message", function(message) {
+          if (message.origin == "http://localhost:3000" || "https://www.spotted.wtf") {
+            if (message.data == "init") {
+              const h = document.querySelectorAll("h1, h2, h3, h4, h5, h6, li, p, div, span, mark, ins, del, sup, sub, small, i, b, blockquote, q, strong, em");
+              let tagId = 0;
+              h.forEach ((tag) => {
+                tag.setAttribute("id", `${tagId}`);
+                if (tag.childNodes[0] && tag.childNodes[0].textContent.trim() != "") {
+                  tagId += 1;
+                  tag.contentEditable = "true";
+                  tag.addEventListener("click", () => {
+                    const old_content = `${tag.id}-${tag.innerText}`;
+                    message.source.postMessage(`${old_content}§`, message.origin);
+                  }, { once: true });
+                  tag.addEventListener("keyup", () => {
+                      const new_content = `${tag.id}-${tag.innerText}`;
+                      message.source.postMessage(`${new_content}`, message.origin)
+                  });
+                } else {
+                return;
                 }
-              }
-            });
+                console.log(tag)
+              })
+            }
           }
-          getMessagesAndAnswer();
-      </script>
+        });
+      }
+      getMessagesAndAnswer();
+    </script>
   </head>
 
   <body>
